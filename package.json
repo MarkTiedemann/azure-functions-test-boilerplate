@@ -1,0 +1,28 @@
+{
+  "name": "azure-functions-test-boilerplate",
+  "version": "0.1.0",
+  "description": "Test boilerplate for Azure Functions.",
+  "scripts": {
+    "test": "npm run test:dev && npm run test:stage",
+    "test:dev": "npm run lint && npm run fmt && npm run unit",
+    "test:stage": "npm run i9n && npm run e2e && npm run sec",
+    "lint": "standard",
+    "fmt": "npm run fmt:js && npm run fmt:json",
+    "fmt:js": "prettier **/*.js --no-semi --single-quote --write",
+    "fmt:json": "prettier **/*.json --parser json --write",
+    "unit": "ava **/test/unit.js -v",
+    "prei9n": "node scripts/i9n/start-host",
+    "i9n": "ava **/test/i9n.js -v",
+    "posti9n": "node scripts/i9n/stop-host",
+    "e2e": "echo e2e",
+    "sec": "nsp check"
+  },
+  "devDependencies": {
+    "ava": "^0.20.0",
+    "azure-functions-core-tools": "^1.0.0-beta.100",
+    "fetch-retry": "^1.1.1",
+    "nsp": "^2.6.3",
+    "prettier": "^1.5.2",
+    "standard": "^10.0.2"
+  }
+}
