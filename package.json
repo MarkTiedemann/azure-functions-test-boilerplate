@@ -6,7 +6,7 @@
     "test": "npm run test:dev && npm run test:stage",
     "test:dev": "npm run lint && npm run fmt && npm run unit",
     "test:stage": "npm run i9n && npm run e2e && npm run sec",
-    "lint": "standard",
+    "lint": "standard --fix",
     "fmt": "npm run fmt:js && npm run fmt:json",
     "fmt:js": "prettier **/*.js --no-semi --single-quote --write",
     "fmt:json": "prettier **/*.json --parser json --write",
