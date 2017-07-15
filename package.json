@@ -30,12 +30,7 @@
     "type": "git",
     "url": "git+https://github.com/hellohq-io/azure-functions-test-boilerplate.git"
   },
-  "keywords": [
-    "azure",
-    "functions",
-    "test",
-    "boilerplate"
-  ],
+  "keywords": ["azure", "functions", "test", "boilerplate"],
   "author": "Mark Tiedemann <mark@hellohq.io>",
   "license": "MIT",
   "bugs": {
